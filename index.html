@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spoke &amp; Sundry | Neighborhood bike repair</title>
+  <meta name="description" content="Walk-in bike repair, tune-ups and overhauls. Most repairs are done within two days.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fixed navigation -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav" aria-label="Main">
+      <a href="#home" class="brand">Spoke &amp; Sundry</a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="visually-hidden">Menu</span>
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Repairs</a></li>
+        <li><a href="#process" class="nav-link">How it works</a></li>
+        <li><a href="#visit" class="nav-link">Visit</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Book a repair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Your bike, back on the road in two days.</h1>
+          <p class="hero-lead">Walk-in repairs, honest quotes and a bench full of the parts that always seem to be missing.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Book a repair</a>
+            <a href="#services" class="btn btn-ghost">See prices</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <svg class="wheel" id="wheel" viewBox="-102 -102 204 204" aria-hidden="true" focusable="false">
+            <circle r="96" class="wheel-tire"></circle>
+            <circle r="88" class="wheel-rim"></circle>
+            <g id="spokes"></g>
+            <circle r="10" class="wheel-hub"></circle>
+            <circle r="3.5" class="wheel-axle"></circle>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Repairs and prices</h2>
+        <p class="section-intro">Parts are extra. We quote before we start, and we never begin work you haven't agreed to.</p>
+
+        <ul class="price-list">
+          <li>
+            <div>
+              <h3>Flat fix</h3>
+              <p>New tube or patch, tire check, pump to pressure.</p>
+            </div>
+            <span class="price">$15</span>
+          </li>
+          <li>
+            <div>
+              <h3>Brake and gear adjustment</h3>
+              <p>Cables, alignment and shifting set so it stops and changes smoothly.</p>
+            </div>
+            <span class="price">$25</span>
+          </li>
+          <li>
+            <div>
+              <h3>Wheel true</h3>
+              <p>Straightens a wobbling wheel and re-tensions the spokes.</p>
+            </div>
+            <span class="price">$20</span>
+          </li>
+          <li>
+            <div>
+              <h3>Standard tune-up</h3>
+              <p>Brakes, gears, chain, bolts and tires, checked and adjusted.</p>
+            </div>
+            <span class="price">$45</span>
+          </li>
+          <li>
+            <div>
+              <h3>Full overhaul</h3>
+              <p>Bike stripped, cleaned, re-greased and rebuilt. Best for bikes stored a long time.</p>
+            </div>
+            <span class="price">$120</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section section-alt" id="process">
+      <div class="container">
+        <h2>How it works</h2>
+
+        <ol class="steps">
+          <li>
+            <h3>Drop it off</h3>
+            <p>Bring your bike in any day we're open. No appointment needed for a quick look.</p>
+          </li>
+          <li>
+            <h3>Approve the quote</h3>
+            <p>We text you what's wrong and what it costs. You say yes or no.</p>
+          </li>
+          <li>
+            <h3>Pick it up</h3>
+            <p>Most bikes are ready within two days. We'll message you the moment yours is.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section" id="visit">
+      <div class="container visit-grid">
+        <div>
+          <h2>Visit the workshop</h2>
+          <address>
+            14 Canal Street<br>
+            Behind the old post office<br>
+            Bike racks out front
+          </address>
+        </div>
+
+        <table class="hours">
+          <caption class="visually-hidden">Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Monday to Friday</th><td>8:00 to 18:00</td></tr>
+            <tr><th scope="row">Saturday</th><td>9:00 to 16:00</td></tr>
+            <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-dark" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Book a repair</h2>
+          <p class="section-intro">Tell us what's wrong with your bike and we'll reply within one working day.</p>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <p class="error" id="nameError" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="error" id="emailError" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">What's wrong with the bike?</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <p class="error" id="messageError" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send request</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Spoke &amp; Sundry</p>
+      <a href="#home" class="back-top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
